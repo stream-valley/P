@@ -22,6 +22,10 @@
             };
 
             request.send();
+	$.get('https://v.api.aa1.cn/api/yiyan/index.php', function (b) {
+                document.getElementById("yiyan") = b;
+
+            });
     </script>
     <style>
         code {
