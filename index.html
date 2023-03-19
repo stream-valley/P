@@ -12,7 +12,8 @@
 	<script src="./js/script.js"></script>
     <script>
         $.get('https://v.api.aa1.cn/api/yiyan/index.php', function (b) {
-                document.getElementById("yiyan").innerHTML = b;
+                document.getElementById("wm").innerHTML = b;
+
             });
     </script>
     <style>
@@ -62,10 +63,8 @@
         </div>
     </div>
 
-    <div>
-        <p id="yiyan" style="text-align: center;" onclick="align('来源：https://v.api.aa1.cn/api/yiyan/index.php')">一言API加载失败！</p>
+    <div style="background-attachment: fixed;">
+        <p id="wm" style="text-align: center;" onclick="align('来源：https://zj.v.api.aa1.cn/api/wenan-wm/?type=json')">唯美句子API加载失败！</p>
     </div>
 
 </body>
-
-</html>
