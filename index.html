@@ -11,10 +11,17 @@
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="./js/script.js"></script>
     <script>
-        $.get('请求地址', function (b) {
-                document.getElementById("yiyan") = b;
+        var request = new XMLHttpRequest();
 
-            });
+            request.open('GET', 'https://v.api.aa1.cn/api/yiyan/index.php', true);
+            request.responseType = 'json';
+
+            request.onload = function () {
+                var data = this.response;
+                document.getElementById("yiyan") = data;
+            };
+
+            request.send();
     </script>
     <style>
         code {
