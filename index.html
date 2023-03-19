@@ -11,19 +11,8 @@
     <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script src="./js/script.js"></script>
     <script>
-        var request = new XMLHttpRequest();
-
-            request.open('GET', 'https://v.api.aa1.cn/api/yiyan/index.php', true);
-            request.responseType = 'json';
-
-            request.onload = function () {
-                var data = this.response;
-                document.getElementById("yiyan") = data;
-            };
-
-            request.send();
 	$.get('https://v.api.aa1.cn/api/yiyan/index.php', function (b) {
-                document.getElementById("yiyan") = b;
+                document.getElementById("yiyan").innerHTML = b;
 
             });
     </script>
